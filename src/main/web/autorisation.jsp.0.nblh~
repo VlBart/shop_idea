@@ -1,0 +1,43 @@
+<%-- 
+    Document   : autirisation
+    Created on : 10.05.2012, 22:18:23
+    Author     : Andrei
+--%>
+
+
+ 
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>JSP Page</title>
+    </head>
+    <body>
+        <%@ include file="/header.jsp" %>
+        <%@ include file="/menu.jsp" %>
+        <div class="centerText">
+                <form name="loginForm" method="POST" action="ActionServlet">
+                    <input type="hidden" name="command" value="login" />
+                        <div class="hearderText">Авторизация</div>
+                        <p>
+                            <label>Логин:
+                                <input name="username" type="text" size="22"/>
+                            <label/>
+                        </p>
+                        <p>
+                            <label>Пароль:
+                                <input name="password" type="password" size="22"/>
+                            <label/>
+                        </p>
+                        <p>
+
+                            <span><a href="error.jsp">Регистрация</a></span>
+                            <input id="okbutton" type="submit" value="Вход" />
+                        </p>
+
+                </form>
+            </div>
+    </body>
+</html>
